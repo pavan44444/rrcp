@@ -1,0 +1,122 @@
+/* ==========================================================================
+   about-section.css  -  shared basics + About / Welcome / Why choose
+   Uses your theme variables (--thm-base etc.) so colors follow theme-color.css.
+   Every rule starts with .boxed_wrapper so it wins over style.css (loaded later).
+   ========================================================================== */
+
+.boxed_wrapper {
+  --a: var(--thm-base, #b9282c);          /* brand / accent */
+  --dk: var(--thm-primary, #14295b);      /* dark sections */
+  --tx: #1f2937;
+  --mt: #6b7280;
+  --ln: #e8eaee;
+  --soft: #f9f5f3;
+  --rd: 14px;
+  --sh: 0 10px 30px rgba(17, 24, 39, .10);
+  --shl: 0 20px 50px rgba(17, 24, 39, .18);
+}
+
+/* ---------- Section titles ---------- */
+.boxed_wrapper .sec-title { position: relative; margin-bottom: 48px; }
+.boxed_wrapper .sec-title h2 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); line-height: 1.2; letter-spacing: -.01em; margin: 0 0 12px; color: var(--dk); }
+.boxed_wrapper .sec-title .sub-title p { color: var(--mt); max-width: 640px; margin: 0; }
+.boxed_wrapper .sec-title.text-center .sub-title p { margin-left: auto; margin-right: auto; }
+.boxed_wrapper .sec-title::after {
+  content: ""; display: block; width: 56px; height: 4px; border-radius: 4px; background: var(--a); margin-top: 18px;
+}
+.boxed_wrapper .sec-title.text-center::after { margin-left: auto; margin-right: auto; }
+
+.boxed_wrapper .sec-title-style3 .sub-title h5 { color: var(--a); font-size: 14px; font-weight: 700; margin-bottom: 6px; }
+.boxed_wrapper .sec-title-style3 h2 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); line-height: 1.2; color: var(--dk); margin: 0; }
+.boxed_wrapper .sec-title-style3 h2 span { color: var(--a); }
+
+/* ---------- Buttons (global) ---------- */
+.boxed_wrapper .btn-one {
+  position: relative; display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 32px; border-radius: 999px; overflow: hidden;
+  background: var(--a); color: #fff; border: 2px solid var(--a);
+  font-size: 15px; font-weight: 700; line-height: 1.2; text-transform: none;
+  box-shadow: 0 10px 22px rgba(17, 24, 39, .18);
+  transition: transform .2s, filter .2s, background .2s, color .2s;
+}
+.boxed_wrapper .btn-one::before, .boxed_wrapper .btn-one::after { display: none; }
+.boxed_wrapper .btn-one .txt { position: relative; display: inline-flex; align-items: center; gap: 8px; color: inherit; }
+.boxed_wrapper .btn-one:hover { transform: translateY(-2px); filter: brightness(.92); color: #fff; }
+.boxed_wrapper .btn-one--style2 { background: #fff; color: var(--a); border-color: #fff; }
+.boxed_wrapper .btn-one--style2:hover { color: var(--a); }
+.boxed_wrapper .btn-one--style4 { background: transparent; color: var(--dk); border-color: var(--dk); box-shadow: none; }
+.boxed_wrapper .btn-one--style4:hover { background: var(--dk); color: #fff; filter: none; }
+
+/* ==========================================================================
+   Welcome / Teaching area  (index)
+   ========================================================================== */
+.boxed_wrapper .teaching-area { position: relative; margin-top: clamp(56px, 8vw, 100px); padding: clamp(56px, 8vw, 100px) 0; background: var(--dk); overflow: hidden; }
+.boxed_wrapper .teaching-area .row { align-items: center; row-gap: 40px; }
+.boxed_wrapper .teaching-content .sec-title { margin-bottom: 28px; }
+.boxed_wrapper .teaching-content .sec-title h2 { color: #fff !important; }
+.boxed_wrapper .teaching-content .sub-title p { color: rgba(255, 255, 255, .86) !important; font-size: 15.5px; max-width: none; }
+
+.boxed_wrapper .teaching-img-box { position: relative; min-height: 460px; border-radius: var(--rd); overflow: hidden; box-shadow: var(--shl); }
+.boxed_wrapper .teaching-img-box__bg { position: absolute; inset: 0; background-size: cover; background-position: center; }
+.boxed_wrapper .teaching-img-box__content-bg { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0, 0, 0, 0) 25%, rgba(8, 14, 36, .94) 100%); }
+.boxed_wrapper .teaching-img-box__content { position: absolute; left: 0; right: 0; bottom: 0; padding: 32px; color: #fff; }
+.boxed_wrapper .teaching-img-box__content h3 { color: #fff; font-size: 1.05rem; font-weight: 500; line-height: 1.6; }
+.boxed_wrapper .teaching-img-box__content h3:first-child { color: var(--a); font-size: 1.3rem; font-weight: 700; margin-bottom: 10px; }
+.boxed_wrapper .teaching-img-box__content .border-line { width: 56px; height: 3px; border-radius: 2px; background: var(--a); margin-bottom: 16px; }
+.boxed_wrapper .authorized-person h4 { display: flex; align-items: center; gap: 14px; color: #fff; font-size: 1rem; margin: 18px 0 0; }
+.boxed_wrapper .authorized-person img { width: 62px; height: 62px; border-radius: 50%; object-fit: cover; border: 3px solid var(--a); background: #fff; }
+
+/* ==========================================================================
+   Essentials image strip  (index)
+   ========================================================================== */
+.boxed_wrapper .essentials-area { position: relative; padding: 40px 0 0; }
+.boxed_wrapper .essentials-area [class*="col-"] { width: 100%; max-width: 100%; padding: 0; flex: 0 0 100%; }
+.boxed_wrapper .essentials-content-box ul { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; margin: 0; padding: 0; list-style: none; }
+.boxed_wrapper .essentials-content-box li { margin: 0; padding: 0; float: none; width: auto; }
+.boxed_wrapper .single-essentials-box .img-box { border-radius: var(--rd); overflow: hidden; box-shadow: var(--sh); aspect-ratio: 4 / 3; }
+.boxed_wrapper .single-essentials-box img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
+.boxed_wrapper .single-essentials-box:hover img { transform: scale(1.08); }
+@media (max-width: 991px) { .boxed_wrapper .essentials-content-box ul { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 575px) { .boxed_wrapper .essentials-content-box ul { grid-template-columns: repeat(2, 1fr); } }
+
+/* ==========================================================================
+   Why choose  (index)
+   ========================================================================== */
+.boxed_wrapper .choose-style10-area { position: relative; padding: clamp(56px, 8vw, 100px) 0; color: #fff; overflow: hidden; }
+.boxed_wrapper .choose-style10-area-bg { position: absolute; inset: 0; background-size: cover; background-position: center; }
+.boxed_wrapper .choose-style10-area-bg::after { content: ""; position: absolute; inset: 0; background: rgba(8, 14, 36, .86); }
+.boxed_wrapper .choose-style10-area .container { position: relative; z-index: 2; }
+.boxed_wrapper .choose-style10-area .sec-title h2 { color: #fff; }
+.boxed_wrapper .choose-style10-content-box-items { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin: 0; padding: 0; list-style: none; }
+.boxed_wrapper .single-choose-style10-content-box-item {
+  float: none; width: auto; margin: 0; padding: 30px; border-radius: var(--rd);
+  background: rgba(255, 255, 255, .08); border: 1px solid rgba(255, 255, 255, .16); border-left: 4px solid var(--a);
+}
+.boxed_wrapper .single-choose-style10-content-box-item h3 { color: #fff; font-size: 1.25rem; margin-bottom: 10px; }
+.boxed_wrapper .single-choose-style10-content-box-item p { color: rgba(255, 255, 255, .82); font-size: 15px; margin: 0; }
+@media (max-width: 767px) { .boxed_wrapper .choose-style10-content-box-items { grid-template-columns: 1fr; } }
+
+/* ==========================================================================
+   About style 1  (inner pages)
+   ========================================================================== */
+.boxed_wrapper .about-style1-area { position: relative; padding: clamp(56px, 8vw, 90px) 0; background: #fff; }
+.boxed_wrapper .about-style1__inner { position: relative; padding: clamp(24px, 5vw, 60px); border: 1px solid var(--ln); border-radius: var(--rd); box-shadow: var(--sh); background: #fff; }
+.boxed_wrapper .about-style1__inner::before { display: none; }
+.boxed_wrapper .about-style1-content { padding-right: 0; }
+.boxed_wrapper .about-style1-content .top { display: flex; align-items: center; gap: 20px; top: 0; margin-bottom: 18px; }
+.boxed_wrapper .about-style1-content .top .big-text { color: var(--ln); font-size: clamp(64px, 9vw, 120px); line-height: 1; font-weight: 800; }
+.boxed_wrapper .about-style1-content .top .big-text.gray-clr { color: #e4ebef; }
+.boxed_wrapper .about-style1-content .top .text p, .boxed_wrapper .about-style1-content .bottom-text p { color: var(--mt); }
+.boxed_wrapper .about-style1-content .btns-box { margin-top: 24px; }
+
+.boxed_wrapper .accreditations-logo { margin-top: 28px; }
+.boxed_wrapper .accreditations-logo .inner-tile h3 { font-size: 1.1rem; margin-bottom: 14px; }
+.boxed_wrapper .accreditations-logo ul { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; margin: 0; padding: 0; list-style: none; }
+.boxed_wrapper .accreditations-logo ul li { margin: 0; padding: 0; }
+.boxed_wrapper .single-accreditations-logo img { max-height: 56px; width: auto; filter: grayscale(1); opacity: .75; transition: .3s; }
+.boxed_wrapper .single-accreditations-logo:hover img { filter: none; opacity: 1; }
+
+.boxed_wrapper .about-style1-img-box .inner { border-radius: var(--rd); overflow: hidden; box-shadow: var(--shl); }
+.boxed_wrapper .about-style1-img-box .inner img { width: 100%; transition: transform .6s; }
+.boxed_wrapper .about-style1-img-box:hover .inner img { transform: scale(1.05); }
+@media (max-width: 991px) { .boxed_wrapper .about-style1-img-box { margin-top: 30px; } }

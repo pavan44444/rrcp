@@ -1,0 +1,87 @@
+/* ==========================================================================
+   services-section.css  -  Infrastructure carousel (index), carousel dots,
+   service pages / service details with sidebar
+   ========================================================================== */
+
+/* ---------- Infrastructure carousel (index) ---------- */
+.boxed_wrapper .high-school-study-educamb-area { position: relative; padding: clamp(56px, 8vw, 100px) 0; background: var(--soft, #f9f5f3); overflow: hidden; }
+.boxed_wrapper .high-school-study-educamb-area-bg { display: none; }
+.boxed_wrapper .high-school-study-educamb-area .container { position: relative; z-index: 2; }
+
+.boxed_wrapper .single-high-school-study-educamb-box { position: relative; }
+.boxed_wrapper .single-high-school-study-educamb-box .img-box { position: relative; }
+.boxed_wrapper .single-high-school-study-educamb-box .inner {
+  position: relative; overflow: hidden; aspect-ratio: 4 / 5; border-radius: var(--rd, 14px); box-shadow: var(--sh, 0 10px 30px rgba(17,24,39,.1));
+}
+.boxed_wrapper .single-high-school-study-educamb-box .inner img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
+.boxed_wrapper .single-high-school-study-educamb-box:hover .inner img { transform: scale(1.08); }
+.boxed_wrapper .single-high-school-study-educamb-box .inner::after {
+  content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 45%, rgba(8, 14, 36, .88));
+}
+.boxed_wrapper .single-high-school-study-educamb-box .overlay-icon { display: none; }
+.boxed_wrapper .single-high-school-study-educamb-box .btn-box { position: absolute; right: 16px; top: 16px; z-index: 2; }
+.boxed_wrapper .single-high-school-study-educamb-box .btn-box a {
+  display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: #fff; color: var(--dk, #14295b); transition: .2s;
+}
+.boxed_wrapper .single-high-school-study-educamb-box .btn-box a:hover { background: var(--a, #b9282c); color: #fff; }
+.boxed_wrapper .single-high-school-study-educamb-box .title-box { position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; padding: 20px; }
+.boxed_wrapper .single-high-school-study-educamb-box .title-box h3 { margin: 0; font-size: 1.15rem; }
+.boxed_wrapper .single-high-school-study-educamb-box .title-box a { color: #fff; }
+
+/* ---------- Shared carousel dots ---------- */
+.boxed_wrapper .owl-dot-style1.owl-carousel .owl-dots, .boxed_wrapper .owl-dot-style1 .owl-dots { display: flex; justify-content: center; gap: 8px; margin-top: 28px; }
+.boxed_wrapper .owl-dot-style1.owl-carousel button.owl-dot {
+  width: 10px; height: 10px; padding: 0; border: 0; border-radius: 999px; background: #c9cdd6; transition: width .3s, background .3s;
+}
+.boxed_wrapper .owl-dot-style1.owl-carousel button.owl-dot.active { width: 30px; background: var(--a, #b9282c); }
+
+/* ---------- Service pages / details ---------- */
+.boxed_wrapper .service-page, .boxed_wrapper .service-details-area { position: relative; padding: clamp(56px, 8vw, 100px) 0; background: #fff; }
+.boxed_wrapper .service-details__sidebar { margin-bottom: 40px; }
+
+.boxed_wrapper .view-all-service { margin-bottom: 30px; padding: 26px; border: 1px solid var(--ln, #e8eaee); border-radius: var(--rd, 14px); background: #fff; box-shadow: var(--sh); }
+.boxed_wrapper .view-all-service .service-pages { margin: 0; padding: 0; list-style: none; }
+.boxed_wrapper .view-all-service .service-pages li { margin: 0 0 8px; }
+.boxed_wrapper .view-all-service .service-pages li:last-child { margin: 0; }
+.boxed_wrapper .view-all-service .service-pages li a {
+  display: flex; align-items: center; justify-content: space-between; padding: 13px 18px; border-radius: 10px;
+  background: var(--soft, #f9f5f3); color: var(--dk, #14295b); font-weight: 600; transition: .2s;
+}
+.boxed_wrapper .view-all-service .service-pages li:hover a { background: var(--a, #b9282c); color: #fff; padding-left: 24px; }
+
+.boxed_wrapper .service-details-contact-info {
+  position: relative; margin-bottom: 30px; padding: 32px 28px; border-radius: var(--rd, 14px); overflow: hidden;
+  background: var(--dk, #14295b); color: #fff; text-align: center;
+}
+.boxed_wrapper .service-details-contact-info .sidebar-info-box-bg { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: .15; }
+.boxed_wrapper .service-details-contact-info > * { position: relative; }
+.boxed_wrapper .service-details-contact-info h3 { color: rgba(255, 255, 255, .85); font-size: 1rem; }
+.boxed_wrapper .service-details-contact-info h2 { color: #fff; font-size: 1.6rem; margin: 0; }
+.boxed_wrapper .service-details-contact-info h2 a { color: #fff; }
+.boxed_wrapper .service-details-contact-info h2 a:hover { color: var(--a, #b9282c); }
+
+.boxed_wrapper .info-download-box ul { margin: 0; padding: 0; list-style: none; }
+.boxed_wrapper .info-download-box ul li {
+  display: flex; align-items: center; gap: 14px; margin-bottom: 12px; padding: 14px 18px; border: 1px solid var(--ln, #e8eaee); border-radius: 12px; background: #fff;
+}
+.boxed_wrapper .info-download-box ul li .icon { color: var(--a, #b9282c); font-size: 24px; }
+.boxed_wrapper .info-download-box ul li .title h5 { margin: 0; font-size: 15px; }
+.boxed_wrapper .info-download-box ul li .title h5 a { color: var(--dk, #14295b); }
+.boxed_wrapper .info-download-box ul li .title h5 a:hover { color: var(--a, #b9282c); }
+
+.boxed_wrapper .service-details__content .img-box1 { overflow: hidden; border-radius: var(--rd, 14px); margin-bottom: 28px; }
+.boxed_wrapper .service-details__content .img-box1 img { width: 100%; transition: transform .6s; }
+.boxed_wrapper .service-details__content .img-box1:hover img { transform: scale(1.04); }
+.boxed_wrapper .service-details__content h2 { font-size: clamp(1.5rem, 2.6vw, 2rem); margin-bottom: 14px; }
+.boxed_wrapper .service-details__content p { color: var(--mt, #6b7280); }
+.boxed_wrapper .service-details__content .text-box2 .text-box2-single p { color: var(--tx, #1f2937); font-weight: 500; }
+.boxed_wrapper .service-details__content .text-box4 { display: flex; flex-wrap: wrap; gap: 28px; margin: 32px 0; }
+.boxed_wrapper .service-details__content .text-box4 .img-box { flex: 0 0 min(100%, 320px); }
+.boxed_wrapper .service-details__content .text-box4 .img-box img { width: 100%; border-radius: var(--rd, 14px); }
+.boxed_wrapper .service-details__content .text-box4 .content-box { flex: 1 1 280px; }
+.boxed_wrapper .service-details__content .text-box4 .content-box ul { margin: 0; padding: 0; list-style: none; }
+.boxed_wrapper .service-details__content .text-box4 .content-box ul li { position: relative; padding: 8px 0 8px 26px; border-bottom: 1px dashed var(--ln, #e8eaee); }
+.boxed_wrapper .service-details__content .text-box4 .content-box ul li::before {
+  content: ""; position: absolute; left: 4px; top: 17px; width: 8px; height: 8px; border-radius: 50%; background: var(--a, #b9282c);
+}
+.boxed_wrapper .service-details__content .text-box4 .content-box ul li:last-child { border-bottom: 0; }

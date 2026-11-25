@@ -1,0 +1,45 @@
+/* ==========================================================================
+   fact-counter-section.css  -  Counters (4 cards in a row)
+   Icon-font icons are hidden because they need the old icon CSS to look right.
+   ========================================================================== */
+
+.boxed_wrapper .fact-counter-area { position: relative; padding: clamp(56px, 8vw, 100px) 0; color: #fff; overflow: hidden; background: var(--dk, #14295b); }
+.boxed_wrapper .fact-counter-area::before { content: none; }
+.boxed_wrapper .fact-counter-area-bg {
+  position: absolute; inset: 0; height: auto; z-index: 0;
+  background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;
+}
+.boxed_wrapper .fact-counter-area-bg::after { content: ""; position: absolute; inset: 0; background: rgba(8, 14, 36, .88); }
+.boxed_wrapper .fact-counter-area .container { position: relative; z-index: 2; }
+.boxed_wrapper .fact-counter-area .sec-title h2 { color: #fff; }
+.boxed_wrapper .fact-counter-area .sec-title .sub-title p { color: rgba(255, 255, 255, .78); }
+
+/* both <ul> lists become one grid of 4 */
+.boxed_wrapper .fact-counter-area .col-xl-12 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.boxed_wrapper .fact-counter-box { display: contents; border: 0; overflow: visible; }
+
+.boxed_wrapper .single-fact-counter {
+  position: relative; display: block; float: none; width: auto; margin: 0; padding: 34px 20px !important; text-align: center !important;
+  border: 1px solid rgba(255, 255, 255, .16) !important; border-radius: var(--rd, 14px);
+  background: rgba(255, 255, 255, .08); backdrop-filter: blur(4px); transition: transform .3s, background .3s;
+}
+.boxed_wrapper .single-fact-counter:hover { transform: translateY(-6px); background: rgba(255, 255, 255, .13); }
+.boxed_wrapper .single-fact-counter .icon-holder { display: none; }
+.boxed_wrapper .single-fact-counter .title-holder { display: block; }
+.boxed_wrapper .single-fact-counter .count-box { color: var(--a, #b9282c); font-size: clamp(2.2rem, 4vw, 3.2rem); line-height: 1.1; font-weight: 800; }
+.boxed_wrapper .single-fact-counter .count-box span { display: inline-block; }
+.boxed_wrapper .single-fact-counter h3 { margin: 10px 0 0; color: #fff; font-size: 1.05rem; line-height: 1.3; font-weight: 500; text-transform: capitalize; }
+
+@media (max-width: 991px) { .boxed_wrapper .fact-counter-area .col-xl-12 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .boxed_wrapper .fact-counter-area .col-xl-12 { grid-template-columns: 1fr; } }
+
+/* ---------- Style 2 (light cards with round icon) ---------- */
+.boxed_wrapper .fact-counter-style2-area { position: relative; padding: clamp(56px, 8vw, 90px) 0; background: var(--soft, #f9f5f3); }
+.boxed_wrapper .single-fact-counter-style2 { margin-bottom: 30px; padding: 28px 20px; text-align: center; border-radius: var(--rd, 14px); background: #fff; box-shadow: var(--sh); }
+.boxed_wrapper .single-fact-counter-style2 .icon { display: grid; place-items: center; width: 84px; height: 84px; margin: 0 auto 14px; border-radius: 50%; background: var(--soft, #f9f5f3); }
+.boxed_wrapper .single-fact-counter-style2 .icon span::before { color: var(--a, #b9282c); font-size: 36px; }
+.boxed_wrapper .single-fact-counter-style2 .outer-box { padding-top: 0; }
+.boxed_wrapper .single-fact-counter-style2 .title { margin-bottom: 8px; padding-bottom: 0; }
+.boxed_wrapper .single-fact-counter-style2 .title::before { content: none; }
+.boxed_wrapper .single-fact-counter-style2 .title h3 { font-size: 1.1rem; margin: 0; }
+.boxed_wrapper .single-fact-counter-style2 .count-box { color: var(--dk, #14295b); font-size: 2.6rem; line-height: 1.1; font-weight: 800; }

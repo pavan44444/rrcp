@@ -1,0 +1,76 @@
+/* ==========================================================================
+   team-section.css  -  Academic program cards (index) + faculty / team cards
+   ========================================================================== */
+
+/* ---------- Academic programs (index: top-instructors) ---------- */
+.boxed_wrapper .top-instructors-area, .boxed_wrapper .instructors-area { position: relative; padding: clamp(56px, 8vw, 100px) 0; background: #fff; }
+.boxed_wrapper .top-instructors__top-title {
+  display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 20px; margin-bottom: 44px;
+}
+.boxed_wrapper .top-instructors-area .row + .row { row-gap: 30px; }
+
+.boxed_wrapper .single-instructors-style1 {
+  position: relative; display: flex; flex-direction: column; height: 100%; overflow: hidden;
+  background: #fff; border: 1px solid var(--ln, #e8eaee); border-radius: var(--rd, 14px);
+  transition: transform .3s, box-shadow .3s;
+}
+.boxed_wrapper .single-instructors-style1:hover { transform: translateY(-6px); box-shadow: var(--shl, 0 20px 50px rgba(17,24,39,.18)); }
+.boxed_wrapper .single-instructors-style1 .img-holder { position: relative; }
+.boxed_wrapper .single-instructors-style1 .inner { overflow: hidden; aspect-ratio: 16 / 10; }
+.boxed_wrapper .single-instructors-style1 .inner img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
+.boxed_wrapper .single-instructors-style1:hover .inner img { transform: scale(1.06); }
+.boxed_wrapper .single-instructors-style1 .category-box {
+  position: absolute; left: 16px; top: 16px; padding: 3px 14px; border-radius: 999px; background: var(--a, #b9282c);
+}
+.boxed_wrapper .single-instructors-style1 .category-box h5 { margin: 0; color: #fff; font-size: 12.5px; font-weight: 700; }
+.boxed_wrapper .single-instructors-style1 .text-holder { flex: 1; padding: 22px 24px 26px; }
+.boxed_wrapper .single-instructors-style1 .level-box { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.boxed_wrapper .single-instructors-style1 .level-box p { margin: 0; font-size: 13.5px; color: var(--mt, #6b7280); }
+.boxed_wrapper .single-instructors-style1 .level-box span::before { color: var(--a, #b9282c); }
+.boxed_wrapper .single-instructors-style1 h3 { font-size: 1.25rem; line-height: 1.3; margin-bottom: 12px; }
+.boxed_wrapper .single-instructors-style1 h3 a { color: var(--dk, #14295b); }
+.boxed_wrapper .single-instructors-style1 h3 a:hover { color: var(--a, #b9282c); }
+.boxed_wrapper .single-instructors-style1 .text-holder > p { font-size: 14.5px; color: var(--mt, #6b7280); margin-bottom: 6px; }
+
+/* ---------- Team / faculty (team-style1) ---------- */
+.boxed_wrapper .team-style1-area, .boxed_wrapper .team-page { position: relative; padding: clamp(56px, 8vw, 100px) 0; background: #fff; }
+.boxed_wrapper .team-style1__top { display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 20px; margin-bottom: 44px; }
+.boxed_wrapper .team-style1__top .sec-title { margin-bottom: 0; }
+
+.boxed_wrapper .single-team-style1 {
+  position: relative; margin-bottom: 30px; overflow: hidden; background: #fff;
+  border: 1px solid var(--ln, #e8eaee); border-radius: var(--rd, 14px); transition: transform .3s, box-shadow .3s;
+}
+.boxed_wrapper .single-team-style1:hover { transform: translateY(-6px); box-shadow: var(--shl, 0 20px 50px rgba(17,24,39,.18)); }
+.boxed_wrapper .single-team-style1 .img-holder { position: relative; }
+.boxed_wrapper .single-team-style1 .img-holder .inner { overflow: hidden; aspect-ratio: 1 / 1; background: var(--soft, #f9f5f3); }
+.boxed_wrapper .single-team-style1 .img-holder .inner img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform .5s; }
+.boxed_wrapper .single-team-style1:hover .img-holder .inner img { transform: scale(1.05); }
+
+.boxed_wrapper .single-team-style1 .share-button { position: absolute; right: 16px; bottom: 16px; z-index: 3; }
+.boxed_wrapper .single-team-style1 .share-button .icon {
+  display: grid; place-items: center; width: 42px; height: 42px; border-radius: 50%;
+  background: var(--a, #b9282c); color: #fff; cursor: pointer; box-shadow: 0 8px 18px rgba(17, 24, 39, .25);
+}
+.boxed_wrapper .single-team-style1 .share-button .social-links {
+  position: absolute; right: 0; bottom: 52px; display: flex; flex-direction: column; gap: 8px; margin: 0; padding: 0; list-style: none;
+  opacity: 0; visibility: hidden; transform: translateY(10px); transition: .25s;
+}
+.boxed_wrapper .single-team-style1 .share-button:hover .social-links { opacity: 1; visibility: visible; transform: none; }
+.boxed_wrapper .single-team-style1 .share-button .social-links li { margin: 0; }
+.boxed_wrapper .single-team-style1 .share-button .social-links li a {
+  display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; background: #fff; color: var(--dk, #14295b); box-shadow: var(--sh);
+}
+.boxed_wrapper .single-team-style1 .share-button .social-links li a:hover { background: var(--a, #b9282c); color: #fff; }
+
+.boxed_wrapper .single-team-style1 .text-holder { padding: 22px 22px 24px; }
+.boxed_wrapper .single-team-style1 .text-holder h3 { font-size: 1.2rem; margin-bottom: 6px; }
+.boxed_wrapper .single-team-style1 .text-holder h3 a { color: var(--dk, #14295b); }
+.boxed_wrapper .single-team-style1 .text-holder h3 a:hover { color: var(--a, #b9282c); }
+.boxed_wrapper .single-team-style1 .text-holder h3 sup { font-size: 12px; font-weight: 600; color: var(--mt, #6b7280); top: -.6em; }
+.boxed_wrapper .single-team-style1 .text-holder .text p { font-size: 14.5px; color: var(--mt, #6b7280); margin: 0 0 10px; }
+.boxed_wrapper .single-team-style1 .text-holder .mail-info { display: flex; align-items: center; gap: 8px; margin-top: 10px; }
+.boxed_wrapper .single-team-style1 .text-holder .mail-info a { font-size: 14px; font-weight: 600; color: var(--a, #b9282c); word-break: break-all; }
+.boxed_wrapper .single-team-style1 .text-holder .mail-info a:hover { text-decoration: underline; }
+
+.boxed_wrapper .team-style1-carousel.owl-carousel .owl-stage-outer { padding: 10px 0 20px; }
